@@ -29,7 +29,7 @@ func Run(year, day, part int, exampleAnswer int, runFunc RunFunc) {
 
 func run(year, day, part int, exampleAnswer int, runFunc RunFunc) error {
 	yearDirName := fmt.Sprintf("year%d", year)
-	dayDirName := fmt.Sprintf("day%d", day)
+	dayDirName := fmt.Sprintf("day%02d", day)
 	directoryPath := filepath.Join(yearDirName, dayDirName)
 
 	var exampleInput []byte
