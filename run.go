@@ -53,7 +53,9 @@ func execute(year int, day int, part int, exampleAnswer int, runFunc RunFunc) er
 		return errors.Wrapf(err, "running example puzzle")
 	}
 
-	if exampleResult != exampleAnswer {
+	if exampleResult == exampleAnswer {
+		fmt.Println("example correct")
+	} else {
 		return fmt.Errorf("incorrect result for example: got %d, want %d", exampleResult, exampleAnswer)
 	}
 
